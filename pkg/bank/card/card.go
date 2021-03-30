@@ -92,7 +92,7 @@ func PaymentSources(cards []types.Card) []types.PaymentSource {
 	var paymentSources []types.PaymentSource
 	for _, card := range cards {
 		if card.Balance > 0 && card.Active {
-			paymentSource := types.PaymentSource{Type: "card", Number: card.Number, Balance: card.Balance}
+			paymentSource := types.PaymentSource{Type: "card", Number: string(card.PAN), Balance: card.Balance}
 			paymentSources = append(paymentSources, paymentSource)
 		}
 	}

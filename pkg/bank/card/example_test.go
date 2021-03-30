@@ -115,10 +115,10 @@ func ExampleTotal_oneNotActiveCard() {
 
 func ExamplePaymentSources() {
 	cards := []types.Card{
-		{Balance: 0, Active: true, Number: "5058 xxxx xxxx 8888"},
-		{Balance: 10_000_00, Active: true, Number: "5058 xxxx xxxx 8889"},
-		{Balance: 10_000_00, Active: true, Number: "5058 xxxx xxxx 88899"},
-		{Balance: 10_000_00, Active: false, Number: "5058 xxxx xxxx 8810"},
+		{Balance: 0, Active: true, PAN: "5058 xxxx xxxx 8888"},
+		{Balance: 10_000_00, Active: true, PAN: "5058 xxxx xxxx 8889"},
+		{Balance: 10_000_00, Active: true, PAN: "5058 xxxx xxxx 88899"},
+		{Balance: 10_000_00, Active: false, PAN: "5058 xxxx xxxx 8810"},
 	}
 
 	paymentSources := PaymentSources(cards)
