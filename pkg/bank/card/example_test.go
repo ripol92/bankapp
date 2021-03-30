@@ -117,6 +117,7 @@ func ExamplePaymentSources() {
 	cards := []types.Card{
 		{Balance: 0, Active: true, Number: "5058 xxxx xxxx 8888"},
 		{Balance: 10_000_00, Active: true, Number: "5058 xxxx xxxx 8889"},
+		{Balance: 10_000_00, Active: true, Number: "5058 xxxx xxxx 88899"},
 		{Balance: 10_000_00, Active: false, Number: "5058 xxxx xxxx 8810"},
 	}
 
@@ -125,6 +126,7 @@ func ExamplePaymentSources() {
 		fmt.Println(source.Number)
 	}
 
-	//Output: 5058 xxxx xxxx 8889
+	// Output: 5058 xxxx xxxx 8889
+	// 5058 xxxx xxxx 88899
 }
 
